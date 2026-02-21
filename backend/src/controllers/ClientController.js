@@ -51,6 +51,8 @@ class ClientController {
   }
 
   async store(req, res) {
+    console.log("BODY:", req.body);
+console.log("BARBERSHOP:", req.barbershop_id);
     try {
       const { name, email, phone, birth_date } = req.body;
 
