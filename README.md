@@ -169,4 +169,4 @@ frontend/
 
 docker-compose logs -f backend 
 
-testando ci
+DEMONSTRANDO FUNCIONAMENTO DA CI
