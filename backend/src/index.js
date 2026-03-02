@@ -35,9 +35,19 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PORT || 3001}`,
+        url: `${process.env.URL_PROD || `http://localhost:${process.env.PORT || 3001}`}`,
       },
     ],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
+    security: [{ bearerAuth: [] }],
   },
   apis: ['./src/routes/*.js'], 
 };
@@ -55,7 +65,7 @@ const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`📘 Swagger disponível em: http://localhost:${PORT}/api-docs`);
+  console.log(`📘 Swagger disponível em: ${process.env.URL_PROD || `http://localhost:${process.env.PORT || 3001}`}/api-docs`);
 });
 
 module.exports = app;

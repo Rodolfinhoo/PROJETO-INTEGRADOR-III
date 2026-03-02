@@ -11,7 +11,7 @@ const ClientController = require('../controllers/ClientController');
 
 /**
  * @swagger
- * /api/clientes:
+ * /api/clients:
  *   get:
  *     summary: Lista todos os clientes
  *     tags: [Clientes]
@@ -23,7 +23,7 @@ router.get('/', ClientController.index);
 
 /**
  * @swagger
- * /api/clientes/{id}:
+ * /api/clients/{id}:
  *   get:
  *     summary: Retorna um cliente pelo ID
  *     tags: [Clientes]
@@ -44,7 +44,7 @@ router.get('/:id', ClientController.show);
 
 /**
  * @swagger
- * /api/clientes:
+ * /api/clients:
  *   post:
  *     summary: Cria um novo cliente
  *     tags: [Clientes]
@@ -69,7 +69,7 @@ router.post('/', ClientController.store);
 
 /**
  * @swagger
- * /api/clientes/{id}:
+ * /api/clients/{id}:
  *   put:
  *     summary: Atualiza um cliente
  *     tags: [Clientes]
@@ -101,7 +101,7 @@ router.put('/:id', ClientController.update);
 
 /**
  * @swagger
- * /api/clientes/{id}:
+ * /api/clients/{id}:
  *   delete:
  *     summary: Remove um cliente
  *     tags: [Clientes]

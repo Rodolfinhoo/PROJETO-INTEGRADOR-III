@@ -11,7 +11,7 @@ const AuthController = require('../controllers/AuthController');
 
 /**
  * @swagger
- * /api/login:
+ * /api/auth/login:
  *   post:
  *     summary: Realiza login do usuário
  *     tags: [Autenticação]
